@@ -117,6 +117,31 @@ automations · worktrees · **skills** · connectors · sub-agents · memory
 Note:
 Osmani 把 loop engineering 拆成這幾塊積木，其中「skill」他講得很白：把專案知識（這裡是「我的判斷」）寫進 SKILL.md，讓 agent 每一輪不用重講一遍 ──「A skill is how you stop re-explaining the same project context every session like a goldfish.」他還特別點名 Codex 跟 Claude Code 用的就是同一個 SKILL.md 格式。所以我今天給你們的這個 beta.skill，不是趕流行硬湊的，它本來就是 loop engineering 裡那塊 skill。（出處：addyosmani.com/blog/loop-engineering/）
 
+----
+
+## 誠實盤點：六塊，我踩到四塊
+
+- **skills** ✅　beta.skill
+- **connectors** ✅　az / gh / aws / kubectl / grafana
+- **sub-agents** ✅　那把尺（測試 / 驗證）
+- **worktrees** ✅　多版本平行維護　← 靠 git 基本功
+- **automations** ✕　養過龍蝦（OpenClaw），訂閱禁程式介接後牠就死了
+- **memory** ✕　跨輪記憶，還沒走到
+
+Note:
+不灌水。六塊我老實做到四塊。automations 不是沒試 ── 我養過一隻龍蝦（OpenClaw），結果消費級訂閱禁止程式介接，牠就死了。這剛好是我前面「在限制裡用 AI、為什麼走 Bedrock / API」最生動的反例：訂閱不是給自動化用的，那是 API 的活。memory（跨輪持久記憶）也還沒真的走到。承認做不到，比假裝全能可信 ── 也呼應後面那句「我可能錯了」。
+
+----
+
+## worktree 玩得動，<br>是因為 git 基本功夠
+
+<p class="creed">你敢讓 agent 在分支上亂搞，<br>是因為 rebase / reflog / worktree<br>你都收得回來。</p>
+
+<p class="sub">git 就是你的 primitive ── 握得住它，才敢放 agent 跑。</p>
+
+Note:
+worktree、rebase、reflog、cherry-pick 這些基本功，不是老派，是你敢放手讓 agent 在程式碼上動刀的底氣。agent 搞砸了，你 reflog 找得回來、reset 收得掉 ── 這就是「握得住 primitive 才放它生」用在 git 上。基本指令練熟，比學任何花俏工具都值得。
+
 ---
 
 <p class="creed">AI 是拿來吵架的，<br>不是拿來拜的。</p>
