@@ -73,12 +73,36 @@ Note:
 
 ---
 
-## 一個真實的 agentic 工作流
+## 重點不是下好一個 prompt，
 
-<p class="sub">把「肉眼比對畫面」這種苦工，丟給機器。</p>
+<p class="creed">是設計一個迴圈。</p>
+
+<p class="sub">給 goal、給一把尺，讓 agent 自己 iterate 到對。 ── 這就是「迴圈工程」(Loop Engineering)</p>
 
 Note:
-← 這張先留白：填你自己要 demo／講的真實工作流（例如：UI 升級用序列式 agent + Playwright 截圖自動比對，把人工逐畫面比對的瓶頸交給機器）。我沒在 repo 裡確認到具體版本與細節，所以不替你編 ── 你給我真實案例，我把這張補滿。
+（2026 年正紅的詞，Addy Osmani 命名，延續 Peter Steinberger 與 Anthropic 的 Boris Cherny 在推的概念；中文媒體譯為「迴圈工程」。）槓桿從「我每次下一個好 prompt」，變成「我設計一個迴圈」：給 agent 一個遞迴目標 ── 把測試弄綠、把這個模組重構但行為不變 ── 它就自己跑：看 → 改 → 驗證 → 讀結果 → 再決定，直到對。
+彩蛋可講：迴圈工程的六大組件（自動化、worktree、技能、連接器、子代理、記憶）裡，第三項「技能 = SKILL.md」── 你們剛剛看到的 beta.skill，本身就是迴圈工程的一塊拼圖。我不是在追流行，是這套東西剛好被命名了。
+
+---
+
+但 agent 要能「iterate 到對」，<br>你得先給它**一把尺**。
+
+<p class="sub">同仁做 UI 升版，用 Playwright 截圖比對 ── 那個 diff，就是 agent 的尺。</p>
+
+Note:
+agent 能自己收斂的前提，是它有辦法自己檢查對不對。測試、screenshot diff、lint、Grafana 上的指標 ── 這就是我整場一直在講的「一把尺」。沒有尺，它只是亂猜得很有自信。（這個 Playwright 截圖比對的 UI 升版，是我們其他同仁在 repo 裡做的，我拿來當「驗證訊號」最好的範例。）
+
+---
+
+## 讓每個工作，都能被 agent 介入
+
+<p class="creed">瓶頸不是模型聰不聰明，<br>是它有沒有「手」。</p>
+
+<p class="sub">給足夠的 `az` · `gh` · `aws` · `kubectl` · `grafana` 權限。</p>
+
+Note:
+迴圈要轉得起來，agent 得真的能動手、能觀察。所以該做的，是把 az、gh、aws、kubectl、grafana 這些工具的權限開到位，讓它從「改」到「驗」整條鏈都搆得到。多數人卡的不是 prompt，是 agent 根本看不到、也碰不到真實系統。
+而開放的邊界，剛好接回我前面那句：握得住 primitive、驗得了的地方，才放它跑 ── 在政府金融環境，這條線要畫得特別清楚。
 
 ---
 
