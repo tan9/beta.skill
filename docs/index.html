@@ -68,6 +68,22 @@
             display: inline-block;
         }
         .reveal section.belief h2 { color: #fff; }
+
+        /* 左下角段名 + 段內進度 */
+        #section-marker {
+            position: fixed;
+            bottom: 18px;
+            left: 24px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            opacity: 0.7;
+            z-index: 40;
+            pointer-events: none;
+            transition: opacity 0.4s;
+        }
     </style>
 </head>
 <body>
@@ -80,6 +96,7 @@
                 data-separator-notes="^Note:">
             </section>
         </div>
+        <div id="section-marker"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
@@ -87,6 +104,21 @@
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
     <script>
+        // 段名（依水平 section 索引；封面留空）
+        const SECTION_NAMES = ['', '打包一個人', '先問底層 primitive', '迴圈工程', '怎麼跟它相處', 'DEMO', '收尾'];
+        function updateMarker() {
+            const idx = Reveal.getIndices();
+            const name = SECTION_NAMES[idx.h] || '';
+            const sections = document.querySelectorAll('.reveal .slides > section');
+            const cur = sections[idx.h];
+            const verticals = cur ? cur.querySelectorAll(':scope > section') : [];
+            const el = document.getElementById('section-marker');
+            let text = name;
+            if (verticals.length > 1) text += '　·　' + (idx.v + 1) + '/' + verticals.length;
+            el.textContent = text;
+            el.style.opacity = name ? '0.7' : '0';
+        }
+
         Reveal.initialize({
             hash: true,
             slideNumber: 'c/t',
@@ -94,7 +126,8 @@
             transitionSpeed: 'slow',
             center: true,
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-        });
+        }).then(updateMarker);
+        Reveal.on('slidechanged', updateMarker);
     </script>
 </body>
 </html>
