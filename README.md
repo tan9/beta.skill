@@ -2,6 +2,9 @@
 
 > beta.skill——把一個人打包成一個檔案的嘗試。
 
+🎞 **投影片(reveal.js)**:<https://tan9.github.io/beta.skill/>
+(演講者模式按 `S`;中段有一張現場 `/beta` 實演的位置。)
+
 這是我在現職單位倒數第二場分享留下的「實體成果」：一個真的跑得起來的 [Claude Code](https://claude.com/claude-code) skill，把我這快 19 年怎麼想事情、怎麼跟 AI 工作的方式，打包進一個 `SKILL.md`。
 
 靈感來自 [colleague-skill](https://github.com/titanwings/colleague-skill)（同事.skill）。差別在於——那個是「被打包」，覺得自己要被取代；這個是我自己動手打包，而且我老早就想這樣。因為「可被取代」從來不是工程師的末日，是工程師的修養。

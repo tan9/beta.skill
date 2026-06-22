@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>培棠.skill — 把一個人打包成一個檔案</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap');
+
+        :root {
+            --accent: #7ee787;      /* 終端綠，工程師味 */
+            --muted: #8b949e;
+        }
+
+        .reveal {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 900;
+            text-transform: none;
+            letter-spacing: 0.02em;
+            line-height: 1.25;
+        }
+        .reveal h1 { font-size: 2.1em; }
+        .reveal h2 { font-size: 1.45em; }
+        .reveal section p { line-height: 1.5; }
+
+        /* 關鍵句：終端綠、粗體、置中 */
+        .reveal .creed {
+            font-weight: 900;
+            color: var(--accent);
+            font-size: 1.5em;
+            line-height: 1.45;
+        }
+        .reveal .sub { color: var(--muted); font-size: 0.7em; font-weight: 300; }
+        .reveal .small { font-size: 0.55em; color: var(--muted); }
+        .reveal .tag {
+            color: var(--accent);
+            font-size: 0.5em;
+            letter-spacing: 0.4em;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.6em;
+        }
+        .reveal strong { color: var(--accent); }
+        .reveal code { font-family: 'JetBrains Mono', monospace; color: var(--accent); background: rgba(126,231,135,0.08); padding: 0 0.25em; border-radius: 3px; }
+        .reveal ul { display: inline-block; text-align: left; }
+        .reveal li { margin: 0.4em 0; }
+
+        /* DEMO / 指令：大顆等寬綠字，像終端機 */
+        .reveal .cmd {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 2.2em;
+            background: rgba(126,231,135,0.08);
+            border: 1px solid rgba(126,231,135,0.3);
+            border-radius: 8px;
+            padding: 0.3em 0.6em;
+            display: inline-block;
+        }
+        .reveal section.belief h2 { color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section
+                data-markdown="slides.md"
+                data-separator="^\r?\n---\r?\n$"
+                data-separator-vertical="^\r?\n----\r?\n$"
+                data-separator-notes="^Note:">
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'fade',
+            transitionSpeed: 'slow',
+            center: true,
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+</html>
