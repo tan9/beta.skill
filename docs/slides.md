@@ -81,8 +81,7 @@ Note:
 <p class="sub">給 goal、給一把尺，讓 agent 自己 iterate 到對。 ── 這就是「迴圈工程」(Loop Engineering)</p>
 
 Note:
-（2026 年正紅的詞，Addy Osmani 命名，延續 Peter Steinberger 與 Anthropic 的 Boris Cherny 在推的概念；中文媒體譯為「迴圈工程」。）槓桿從「我每次下一個好 prompt」，變成「我設計一個迴圈」：給 agent 一個遞迴目標 ── 把測試弄綠、把這個模組重構但行為不變 ── 它就自己跑：看 → 改 → 驗證 → 讀結果 → 再決定，直到對。
-彩蛋可講：迴圈工程的六大組件（自動化、worktree、技能、連接器、子代理、記憶）裡，第三項「技能 = SKILL.md」── 你們剛剛看到的 beta.skill，本身就是迴圈工程的一塊拼圖。我不是在追流行，是這套東西剛好被命名了。
+（2026 年由 Google 的 Addy Osmani 命名，延續 Peter Steinberger（OpenClaw）與 Anthropic 的 Boris Cherny 的概念；中文媒體譯為「迴圈工程」。出處：addyosmani.com/blog/loop-engineering/。）槓桿從「我每次下一個好 prompt」，變成「我設計一個迴圈」：給 agent 一個遞迴目標 ── 把測試弄綠、把這個模組重構但行為不變 ── 它就自己跑：看 → 改 → 驗證 → 讀結果 → 再決定，直到對。（beta.skill 跟這套東西的關係，下一張講。）
 
 ----
 
@@ -107,14 +106,16 @@ Note:
 
 ----
 
-## beta.skill ＝ 迴圈工程的一塊拼圖
+## beta.skill 是哪一塊？
 
-<p class="sub">六大組件裡的第三塊：技能（SKILL.md）。</p>
+automations · worktrees · **skills** · connectors · sub-agents · memory
+
+<p class="sub">Loop Engineering 的積木（Addy Osmani）。他對 skill 的定義，就是<br>「一個放著 `SKILL.md` 的資料夾」── 你手上這個，就是這一塊。</p>
 
 <p class="creed">我不是在追流行，<br>是這套東西剛好被命名了。</p>
 
 Note:
-迴圈工程的六大組件 ── 自動化、worktree、技能、連接器、子代理、記憶。我今天給你們看的這個 SKILL.md，就是「技能」那一塊。等一下 demo，你會看到它在迴圈裡，扮演「我的判斷」那一份。
+Osmani 把 loop engineering 拆成這幾塊積木，其中「skill」他講得很白：把專案知識（這裡是「我的判斷」）寫進 SKILL.md，讓 agent 每一輪不用重講一遍 ──「A skill is how you stop re-explaining the same project context every session like a goldfish.」他還特別點名 Codex 跟 Claude Code 用的就是同一個 SKILL.md 格式。所以我今天給你們的這個 beta.skill，不是趕流行硬湊的，它本來就是 loop engineering 裡那塊 skill。（出處：addyosmani.com/blog/loop-engineering/）
 
 ---
 
