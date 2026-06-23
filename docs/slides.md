@@ -229,3 +229,19 @@ Note:
 
 Note:
 （收尾，把檔案真的交出去。）repo 在 github.com/tan9/beta.skill，clone 進你的 skills 目錄就能用。不藏私，連我怎麼準備這場分享，都攤給你看。
+
+---
+
+<!-- .slide: data-background-color="#0d1117" -->
+## 參考來源
+
+<div class="refs">
+迴圈工程 / Loop Engineering ── Addy Osmani　<code>addyosmani.com/blog/loop-engineering</code><br>
+中文導讀 ── 數位時代　<code>bnext.com.tw/article/91246</code><br>
+OpenClaw（龍蝦）　<code>github.com/openclaw/openclaw</code><br>
+同事.skill / dot-skill　<code>github.com/titanwings/colleague-skill</code><br>
+這份 skill　<code>github.com/tan9/beta.skill</code>
+</div>
+
+Note:
+想深究的，這幾個連結帶得走。

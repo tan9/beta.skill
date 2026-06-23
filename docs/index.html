@@ -73,6 +73,8 @@
         }
         /* 長指令用較小字級，避免爆框 */
         .reveal .cmd.sm { font-size: 1.15em; }
+        /* 參考來源 */
+        .reveal .refs { font-size: 0.5em; text-align: left; line-height: 2.1; display: inline-block; }
         .reveal section.belief h2 { color: #fff; }
 
         /* 左下角段名 + 段內進度 */
@@ -111,7 +113,7 @@
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
     <script>
         // 段名（依水平 section 索引；封面留空）
-        const SECTION_NAMES = ['', '打包一個人', '先問底層 primitive', '迴圈工程', '怎麼跟它相處', 'DEMO', '收尾'];
+        const SECTION_NAMES = ['', '打包一個人', '先問底層 primitive', '迴圈工程', '怎麼跟它相處', 'DEMO', '收尾', '參考'];
         function updateMarker() {
             const idx = Reveal.getIndices();
             const name = SECTION_NAMES[idx.h] || '';
