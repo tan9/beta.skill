@@ -220,7 +220,7 @@ Note:
 ----
 
 <!-- .slide: data-background-color="#000000" -->
-<p class="cmd">git clone … ~/.claude/skills/beta</p>
+<p class="cmd sm">git clone https://github.com/tan9/beta.skill.git ~/.claude/skills/beta</p>
 
 <p class="sub">拿去用。然後告訴我哪裡像、哪裡不像。</p>
 
