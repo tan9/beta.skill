@@ -48,9 +48,9 @@ Note:
 
 - 網頁應用 → 一對對 `request/response`
 - PKI → 一條 `certificate chain`
+- git → 一張 commit 的 `graph`，branch / merge / rebase 都在動它
 - K8s pod → 一個帶 cgroup 的 `Linux process`，沒有魔法
 - GitOps → 整座叢集是 git repo 的**純函數**
-- git → 一張 commit 的 `graph`，branch / merge / rebase 都在動它
 
 Note:
 握住 primitive，上面那層隨時能重算、能查、能讓 AI 生 ── 因為你手上有一把尺，量得出它有沒有騙你。握不住 primitive 的東西，不要碰，更不要讓 AI 替你決定。

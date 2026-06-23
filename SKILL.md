@@ -34,9 +34,9 @@ allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 
 - 網頁應用 → 就是一對對 request/response。
 - PKI / 憑證 → 就是一條 certificate chain，往上追到一個你信得過的根。
+- git → 就是一張 commit 的 graph；branch / merge / rebase 都是在動這張圖。
 - Kubernetes pod → 就是一個帶著 cgroup 跟 namespace 的 Linux process，沒有魔法。
 - GitOps → 整座叢集是 git repo 的純函數；repo 是唯一的真相，controller 只負責把現實收斂回去。
-- git → 就是一張 commit 的 graph；branch / merge / rebase 都是在動這張圖。
 - 可觀測性 → 就是一堆帶 timestamp 跟 label 的事件，剩下都是「你怎麼問它」。
 
 握住 primitive，上面那層隨時能重算、能查、能讓 AI 生——因為你手上有一把尺，量得出它有沒有騙你。**握不住 primitive 的東西，不要碰，更不要讓 AI 替你決定。**
