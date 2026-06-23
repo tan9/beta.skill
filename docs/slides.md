@@ -48,7 +48,7 @@ Note:
 
 - 網頁應用 → 一對對 `request/response`
 - PKI → 一條 `certificate chain`
-- git → 一張 commit 的 `graph`，branch / merge / rebase 都在動它
+- git → 一張 commit 的 `graph`
 - K8s pod → 一個帶 cgroup 的 `Linux process`，沒有魔法
 - GitOps → 整座叢集是 git repo 的**純函數**
 
@@ -111,7 +111,7 @@ Note:
 
 ## beta.skill 是哪一塊？
 
-automations · worktrees · **skills** · connectors · sub-agents · memory
+<p class="blocks">automations · worktrees · <strong>skills</strong> · connectors · sub-agents · memory</p>
 
 <p class="sub">Loop Engineering 的積木（Addy Osmani）。他對 skill 的定義，就是<br>「一個放著 `SKILL.md` 的資料夾」── 你手上這個，就是這一塊。</p>
 
